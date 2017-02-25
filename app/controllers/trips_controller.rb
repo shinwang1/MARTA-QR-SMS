@@ -25,7 +25,7 @@ class TripsController < ApplicationController
   # POST /trips.json
   def create
     @trip = Trip.new(trip_params)
-
+    p @trip
     respond_to do |format|
       if @trip.save
         format.html { redirect_to @trip, notice: 'Trip was successfully created.' }
@@ -64,7 +64,15 @@ class TripsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_trip
-      @trip = Trip.find(params[:id])
+      if Trip.exists?(params[:id]) == true
+        @trip = Trip.find(params[:id])
+      else
+        @trip = Trip.new
+        render action: "new"
+        # @trip.save
+        # @trip = Trip.find(params[:id])
+      end
+
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
