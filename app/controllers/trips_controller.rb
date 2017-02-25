@@ -30,6 +30,13 @@ class TripsController < ApplicationController
       if @trip.save
         format.html { redirect_to @trip, notice: 'Trip was successfully created.' }
         format.json { render :show, status: :created, location: @trip }
+
+        @client = Twilio::REST::Client.new ENV['TWILIO_ACCOUNT_SID'], ENV['TWILIO_AUTH_TOKEN']
+        @client.account.messages.create(
+          from: ENV['TWILIO_NUMBER'],
+          to: '+1'+ @trip.phone_number,
+          body: 'Welcome to MARTA.'
+        )
       else
         format.html { render :new }
         format.json { render json: @trip.errors, status: :unprocessable_entity }
