@@ -6,8 +6,8 @@ class StopsController < ApplicationController
     @client.account.messages.create(
       from: ENV['TWILIO_NUMBER'],
       to: '+1'+ @trip.phone_number,
-      body: 'Here is your final destination.' + ' https://goo.gl/maps/decdAnWvMhA2'
-      # media_url: "https://goo.gl/maps/decdAnWvMhA2"
+      body: 'Here is your final destination.' + ' https://goo.gl/maps/CKMxSZwhoQG2'
+      # media_url: "https://goo.gl/maps/CKMxSZwhoQG2"
     )
   end
 end
