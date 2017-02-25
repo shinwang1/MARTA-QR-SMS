@@ -1,11 +1,14 @@
 
 <div class="phonesubmission">
-  <p id="notice"><%= notice %></p>
-<p>
-  <strong>Phone number:</strong>
-  <%= @trip.phone_number %>
-</p>
-<div class="clearbtn">
-<%= link_to 'Re-enter your number', new_trip_path %>
-</div>
+  <div class="form-textbox">
+    <p id="notice"><%= notice %></p>
+      <p>
+        <strong>Phone number:</strong>
+        <%= @trip.phone_number %>
+      </p>
+  </div>
+
+  <div class="clearbtn">
+    <%= link_to 'Re-enter your number', new_trip_path %>
+  </div>
 </div>

@@ -1,0 +1,159 @@
+/* line 1, /Users/oldmac/Desktop/Projects/qr-sms/qr-sms/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #F1F1F1;
+}
+
+@font-face {
+  font-family: 'soleilRegular';
+  src: url(/assets/Soleil_Regular-e2bd517376b8f4c908dee502229bc6eee49552b4e8c69da689f344c6918c4567.otf) format("truetype");
+}
+@font-face {
+  font-family: "soleilSemibold";
+  src: url(/assets/Soleil_Semibold-264f5ba7736ab3bbc03966dc0939f9f0e35fd6d0df20f088f575850147304e20.otf) format("truetype");
+}
+@font-face {
+  font-family: "soleilBold";
+  src: url(/assets/Soleil_Bold-6537e970885e9925a11c67f1cdc43062cd38fb0b0291df73603665c81338e9f3.otf) format("truetype");
+}
+/* line 21, /Users/oldmac/Desktop/Projects/qr-sms/qr-sms/app/assets/stylesheets/scaffolds.scss */
+h1 {
+  font-family: "soleilSemibold", Arial;
+}
+
+/* line 26, /Users/oldmac/Desktop/Projects/qr-sms/qr-sms/app/assets/stylesheets/scaffolds.scss */
+input[type=submit] {
+  width: 288px;
+  margin-bottom: 25px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  background: #00BBEF;
+  box-shadow: 0 3px 0 0 #026985;
+  border-radius: 100px;
+  font-family: "soleilBold", Arial;
+  font-size: 16px;
+  color: #FFFFFF;
+  line-height: 27px;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+}
+
+/* line 44, /Users/oldmac/Desktop/Projects/qr-sms/qr-sms/app/assets/stylesheets/scaffolds.scss */
+input[type=text] {
+  width: 268px;
+  margin-bottom: 25px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  background: #FFFFFF;
+  border-radius: 100px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #231F20;
+  font-family: "soleilRegular", Arial;
+  font-size: 16px;
+  color: #666666;
+  line-height: 27px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+}
+
+/* line 64, /Users/oldmac/Desktop/Projects/qr-sms/qr-sms/app/assets/stylesheets/scaffolds.scss */
+.clearbtn {
+  width: 288px;
+  margin-bottom: 40px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  background: #F79044;
+  box-shadow: 0 3px 0 0 #026985;
+  border-radius: 100px;
+  line-height: 27px;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+}
+
+/* line 78, /Users/oldmac/Desktop/Projects/qr-sms/qr-sms/app/assets/stylesheets/scaffolds.scss */
+.clearbtn a:link, .clearbtn a:visited, .clearbtn a:hover, .clearbtn a:active {
+  text-decoration: none;
+  font-family: "soleilBold", Arial;
+  font-size: 16px;
+  color: #FFFFFF;
+}
+
+/* line 85, /Users/oldmac/Desktop/Projects/qr-sms/qr-sms/app/assets/stylesheets/scaffolds.scss */
+.title {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* line 90, /Users/oldmac/Desktop/Projects/qr-sms/qr-sms/app/assets/stylesheets/scaffolds.scss */
+.phonesubmission {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* line 95, /Users/oldmac/Desktop/Projects/qr-sms/qr-sms/app/assets/stylesheets/scaffolds.scss */
+.instructions {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 54px;
+  font-family: "soleilRegular", Arial;
+}
+
+/* line 103, /Users/oldmac/Desktop/Projects/qr-sms/qr-sms/app/assets/stylesheets/scaffolds.scss */
+.service-container {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 54px;
+  font-family: "soleilRegular", Arial;
+  border-style: solid;
+  border-width: 2px;
+  width: 355px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #404040;
+  padding-bottom: 12px;
+}
+
+/* line 118, /Users/oldmac/Desktop/Projects/qr-sms/qr-sms/app/assets/stylesheets/scaffolds.scss */
+.footer {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 54px;
+  font-family: "soleilRegular", Arial;
+}
+
+/* line 126, /Users/oldmac/Desktop/Projects/qr-sms/qr-sms/app/assets/stylesheets/scaffolds.scss */
+.footer a {
+  color: #00BBEF;
+}
+
+@media screen and (max-width: 480px) {
+  /* line 132, /Users/oldmac/Desktop/Projects/qr-sms/qr-sms/app/assets/stylesheets/scaffolds.scss */
+  h1 {
+    font-family: "soleilSemibold";
+    font-size: 18pt;
+  }
+
+  /* line 137, /Users/oldmac/Desktop/Projects/qr-sms/qr-sms/app/assets/stylesheets/scaffolds.scss */
+  p {
+    font-size: 10pt;
+  }
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+

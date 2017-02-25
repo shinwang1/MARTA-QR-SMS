@@ -37,7 +37,7 @@ class TripsController < ApplicationController
     # else
       respond_to do |format|
         if @trip.save
-          format.html { redirect_to @trip, notice: 'We have registered your trip.' }
+          format.html { redirect_to @trip, notice: 'Your trip is registered!' }
           format.json { render :show, status: :created, location: @trip }
 
           @client = Twilio::REST::Client.new ENV['TWILIO_ACCOUNT_SID'], ENV['TWILIO_AUTH_TOKEN']
