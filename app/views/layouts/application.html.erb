@@ -9,6 +9,28 @@
   </head>
 
   <body>
+    <div class="title">
+		    <h1>Welcome to MARTA Connect</h1>
+	  </div>
+
+	  <div class="instructions">
+		    <p>Input your phone number for up to date directions and more...lorem ipsum dolor...
+	  </div>
     <%= yield %>
+
+    <div class="service-container">
+      <h2>Service Alerts</h2>
+      <span> No service advisories at this time</span>
+    </div>
+
+
+    <div class="footer">
+      For more information, visit <a href="http://www.itsmarta.com">www.itsmarta.com</a>
+      <p>
+          Some legal copy here
+      <p>
+      <%= image_tag 'brand.png' %>
+
+    </div>
   </body>
 </html>

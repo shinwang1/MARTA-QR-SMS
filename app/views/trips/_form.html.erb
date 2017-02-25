@@ -1,4 +1,22 @@
 <%= form_for(trip) do |f| %>
+
+<div class="phonesubmission">
+  <div class="field">
+    <%= f.text_field :phone_number, placeholder: "Enter Phone Number" %>
+  </div>
+
+  <!-- <div class="actions" name="Send"> -->
+
+  <div class="actions">
+    <%= f.submit 'SUBMIT'%><br>
+    <div class="clearbtn">
+    <%= link_to 'Clear Phone Number', new_trip_path %>
+    </div>
+  </div>
+
+
+</div>
+
   <% if trip.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(trip.errors.count, "error") %> prohibited this trip from being saved:</h2>
@@ -10,14 +28,4 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :phone_number %>
-    <%= f.text_field :phone_number %>
-  </div>
-
-  <!-- <div class="actions" name="Send"> -->
-  <div class="actions">
-    <%= f.submit 'Send'%>
-  </div>
 <% end %>
