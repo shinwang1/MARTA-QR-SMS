@@ -25,23 +25,32 @@ class TripsController < ApplicationController
   # POST /trips.json
   def create
     @trip = Trip.new(trip_params)
-    p @trip
-    respond_to do |format|
-      if @trip.save
-        format.html { redirect_to @trip, notice: 'Trip was successfully created.' }
-        format.json { render :show, status: :created, location: @trip }
+    # p @trip
+    # @exist_number = Trip.find_by(phone_number: @trip.phone_number)
+    # p "_____"
+    # p @exist_number
+    # if @exist_number
+      # redirect_to action: 'new'
+      # render :new
+      # render action: "new"
+    # else
+      respond_to do |format|
+        if @trip.save
+          format.html { redirect_to @trip, notice: 'We have registered your trip.' }
+          format.json { render :show, status: :created, location: @trip }
 
-        @client = Twilio::REST::Client.new ENV['TWILIO_ACCOUNT_SID'], ENV['TWILIO_AUTH_TOKEN']
-        @client.account.messages.create(
-          from: ENV['TWILIO_NUMBER'],
-          to: '+1'+ @trip.phone_number,
-          body: 'Welcome to MARTA.'
-        )
-      else
-        format.html { render :new }
-        format.json { render json: @trip.errors, status: :unprocessable_entity }
+          @client = Twilio::REST::Client.new ENV['TWILIO_ACCOUNT_SID'], ENV['TWILIO_AUTH_TOKEN']
+          @client.account.messages.create(
+            from: ENV['TWILIO_NUMBER'],
+            to: '+1'+ @trip.phone_number,
+            body: 'Welcome to MARTA.'
+          )
+        else
+          format.html { render :new }
+          format.json { render json: @trip.errors, status: :unprocessable_entity }
+        end
       end
-    end
+    # end
   end
 
   # PATCH/PUT /trips/1
