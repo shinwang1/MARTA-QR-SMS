@@ -5,7 +5,7 @@ class StopsController < ApplicationController
     @client = Twilio::REST::Client.new ENV['TWILIO_ACCOUNT_SID'], ENV['TWILIO_AUTH_TOKEN']
     @client.account.messages.create(
       from: ENV['TWILIO_NUMBER'],
-      to: '+1'+ @trip.phone_number,
+      to: '+16789462782'+ @trip.phone_number,
       body: 'Here is your final destination.' + ' https://goo.gl/maps/CKMxSZwhoQG2'
       # media_url: "https://goo.gl/maps/CKMxSZwhoQG2"
     )
